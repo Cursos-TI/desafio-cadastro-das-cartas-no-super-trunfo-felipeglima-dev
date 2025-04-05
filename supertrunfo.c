@@ -38,7 +38,7 @@
         scanf("%s", &codigo01);
         printf("Código da Carta: %s\n", codigo01);
         printf("Digite o nome da cidade: ");
-        scanf("%s", &cidade01);
+        fgets(cidade01, 100, stdin);
         printf("Cidade: %s\n", cidade01);
 
         return 0;
