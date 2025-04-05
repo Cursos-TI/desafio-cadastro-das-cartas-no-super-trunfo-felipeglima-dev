@@ -4,37 +4,20 @@
         
         //Variáveis_cidade01:
         char estado01[20];
-        char codigo01[60];
+        char codigo01[20];
         char cidade01[100];
         int populacao01;
         float area01;
         float pib01;
         int nturismo01;
 
-        //Variáveis_cidade02:
-        char estado02[20];
-        char codigo02[60];
-        char cidade02[100];
-        float populacao02;
-        float area02;
-        float pib02;
-        int turismo02;
-
-        //Variáveis_cidade03:
-        char estado03[20];
-        char codigo03[60];
-        char cidade03[100];
-        float populacao03;
-        float area03;
-        float pib03;
-        int turismo03;
 
         //Cadastro_carta01:
         printf("Carta nº1: \n");
 
         printf("Insira o Código do Estado: ");
         scanf("%s", &estado01);   
-        printf("Estado: %s \n", estado01);
+        printf("Estado: %s\n", estado01);
 
         printf("Insira o Código da Carta: ");
         scanf("%s", &codigo01);
@@ -50,25 +33,17 @@
 
         printf("Insira a área total da cidade: ");
         scanf( "%f", &area01);
-        printf("Área total %.3f Km². \n");
+        printf("Área total %.3f Km². \n", area01);
 
         printf("Insira o PIB referente: ");
         scanf("%f", &pib01);
         printf("PIB: %.3f Bilhões de Reais \n", pib01);
 
         printf("Nº de Pontos Turísticos? ");
-        scanf("%e", &nturismo01);
-        printf("São %e pontos turísticos. \n");
+        scanf("%d", &nturismo01);
+        printf("São %d pontos turísticos. \n", nturismo01);
 
 
         return 0;
-
-
-
-
-
-
-
-
 
 }
