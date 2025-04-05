@@ -8,7 +8,7 @@
         char cidade01[100];
         int populacao01;
         float area01;
-        int pib01;
+        float pib01;
         int nturismo01;
 
         //Variáveis_cidade02:
@@ -45,8 +45,20 @@
         printf("Cidade: %s\n", cidade01);
 
         printf("Insira o Nº Populacional: ");
-        scanf("%f", &populacao01);
-        printf("População: %f", populacao01);
+        scanf("%d", &populacao01);
+        printf("População: %d habitantes \n", populacao01);
+
+        printf("Insira a área total da cidade: ");
+        scanf( "%f", &area01);
+        printf("Área total %f Km². \n");
+
+        printf("Insira o PIB referente: ");
+        scanf("%f", &pib01);
+        printf("PIB: %.3f Bilhões de Reais \n", pib01);
+
+        printf("Nº de Pontos Turísticos? ");
+        scanf("%d", &nturismo01);
+        printf("São %d pontos turísticos. \n");
 
 
         return 0;
