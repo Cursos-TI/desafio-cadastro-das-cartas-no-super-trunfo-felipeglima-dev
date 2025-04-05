@@ -31,15 +31,23 @@
 
         //Cadastro_carta01:
         printf("Carta nº1: \n");
-        printf("Digite o Código do Estado: ");
+
+        printf("Insira o Código do Estado: ");
         scanf("%s", &estado01);   
         printf("Estado: %s\n", estado01);
-        printf("Digite o Código da Carta: ");
+
+        printf("Insira o Código da Carta: ");
         scanf("%s", &codigo01);
         printf("Código da Carta: %s\n", codigo01);
-        printf("Digite o nome da cidade: ");
-        fgets(cidade01, 100, stdin);
+
+        printf("Insira o nome da cidade: ");
+        scanf("%s", &cidade01);
         printf("Cidade: %s\n", cidade01);
+
+        printf("Insira o Nº Populacional: ");
+        scanf("%f", &populacao01);
+        printf("População: %f", populacao01);
+
 
         return 0;
 
