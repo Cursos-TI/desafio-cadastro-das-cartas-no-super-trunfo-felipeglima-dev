@@ -31,15 +31,15 @@
 
         //Cadastro_carta01:
         printf("Carta nº1: \n");
-        printf("Digite a sua idade: ");
-        scanf("%d", &idade);   
-        printf("A idade é: %d\n", idade);
-        printf("Digite a sua altura: ");
-        scanf("%f", &altura);
-        printf("Sua altura é: %.2f\n", altura);
-        printf("Digite seu nome: ");
-        scanf("%s", &nome);
-        printf("Seu nome é: %s\n", nome);
+        printf("Digite o Estado : \n");
+        scanf("%s", &estado01);   
+        printf("Estado : %s\n", estado01);
+        printf("Digite o Código da Carta: ");
+        scanf("%s", &codigo01);
+        printf("Código da Carta : %s\n", codigo01);
+        printf("Digite o nome da cidade : \n");
+        scanf("%s", &cidade01);
+        printf("Cidade : %s\n", cidade01);
 
         return 0;
 
