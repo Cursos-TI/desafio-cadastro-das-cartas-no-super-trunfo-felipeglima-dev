@@ -15,6 +15,7 @@
         //CARTA01:
         // ENTRADA DE DADOS:
 
+        printf("______________#####______________\n");
         printf("Carta nº1: \n");
 
         printf("Insira o Código do Estado: "); //Estado:
@@ -27,7 +28,7 @@
         scanf(" %[^\n]", cidade01);
        
         printf("Insira o Nº Populacional: "); //Populacao:
-        scanf("%d", &populacao1);
+        scanf("%d", &populacao01);
 
         printf("Insira a Área total da cidade: "); //Area total:
         scanf( "%f", &area01);
@@ -63,6 +64,8 @@
 
         // ENTRADA DE DADOS_02:
             
+        printf("\n");
+        printf("______________#####______________\n");
         printf("Carta nº2: \n");
             
         printf("Insira o Código do Estado: "); //Estado:
