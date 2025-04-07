@@ -118,3 +118,7 @@
 return 0;
             
 }
+
+/*Estou tentando fazer o cálculo de densidade populacional e pib per capita funcionar
+porém ele não está calculando corretamente quando insiro valores. Se puder me ajudar com essa
+questão, fico agradecido.*/
