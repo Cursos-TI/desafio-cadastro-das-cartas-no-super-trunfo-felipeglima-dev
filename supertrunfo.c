@@ -10,7 +10,7 @@
         float area01;
         float pib01;
         int nturismo01;
-        float densidade01 = populacao01 / area01;
+        float densidade01 = (float) populacao01 / area01;
         float pibcapita01 = (float) pib01 / populacao01;
 
 
@@ -41,10 +41,6 @@
         printf("Nº de Pontos Turísticos? "); //Turismo:
         scanf("%d", &nturismo01);
 
-        printf("Insira a Densidade Populacional: ");
-        scanf("%f", &densidade01);
-
-
 
             //SAÍDA DE DADOS_01:
 
@@ -55,10 +51,10 @@
             printf("Área total %.3f Km². \n", area01);
             printf("PIB: %.3f Bilhões de Reais \n", pib01);
             printf("São %d pontos turísticos. \n", nturismo01);
-            printf("Densidade Populacional: %.2f hab/km²", densidade01);
-            printf("PIB per Capita: %.2f reais", pibcapita01);
+            printf("Densidade Populacional: %.3f hab/km²", densidade01);
+            printf("PIB per Capita: %.3f reais", pibcapita01);
             
-            
+
         //Variáveis_cidade02:
         char estado02[40];
         char codigo02[40];
