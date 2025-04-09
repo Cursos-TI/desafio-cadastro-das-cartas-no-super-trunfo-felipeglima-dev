@@ -5,6 +5,7 @@
         setlocale(LC_ALL, "portuguese_Brazil");
 
         //Variáveis_cidade01:
+
         char estado1[90];
         char codigo1[90];
         char cidade1[100];
@@ -16,20 +17,22 @@
         densidade_populacional1 = populacao1 / area1;
         float pib_per_capita1;
         pib_per_capita1 = pib1 / populacao1;
-        unsigned int superpoder1;
-        superpoder1 = (int) populacao1 + (int) area1 + (int) pib1 + nturismo1
-        + (int) pib_per_capita1 + (int)  densidade_populacional1;
+        float inverso_densidade_populacional1;
+        inverso_densidade_populacional1 = 1 / densidade_populacional1;
+        float super_poder1;
+        super_poder1 = populacao1 + area1 + pib1 + (float)nturismo1 + pib_per_capita1 + inverso_densidade_populacional1; 
+
 
         //CARTA01:
 
         //ENTRADA DE DADOS_01:
 
-        printf("#______________#### SUPERTRUNFO ####______________#\n");
+        printf("#______________#### DESAFIO SUPERTRUNFO ####______________#\n");
         printf("\n");
-        printf("Cadrastre sua Primeira carta(01): \n");
+        printf("CADASTRE SUA 1º CARTA(01)! \n");
         printf("\n");
 
-        printf("Insira o Código do Estado: ");
+        printf("Insira o código do Estado: ");
         scanf(" %[^\n]", estado1);
         
         printf("Insira o Nome do Estado: ");
@@ -53,7 +56,7 @@
         printf("Nº de Pontos Turísticos: ");
         scanf("%d", &nturismo1);
 
-            //SAÍDA DE DADOS_01:
+            //SAÍDA DE DADOS_CARTA01:
 
             printf("Código do Estado: %s\n", estado1);
             printf("Nome do Estado: %s\n", estado1);
@@ -63,10 +66,13 @@
             printf("Área Total %.3f Km². \n", area1);
             printf("PIB: %.3f Bilhões de Reais \n", pib1);
             printf("São %d pontos turísticos. \n", nturismo1);
-            printf("Densidade Populacional: %f hab/km²\n", populacao1 / area1);
+            printf("Densidade Populacional: %.3f hab/km²\n", populacao1 / area1);
             printf("PIB per Capita: %.3f reais\n", pib1 / populacao1);
-            printf("Super Poder: %f pontos\n", superpoder1);
-            printf("CARTA 01 CADASTRADA COM SUCESSO!\n");
+            printf("Super Poder: %f pontos\n", super_poder1);
+            printf("Computando..... ");
+            printf("CARTA (01) CADASTRADA COM SUCESSO!\n");
+            printf("\n");
+            printf("-----------------------------------\n");
 
 return 0;
 
