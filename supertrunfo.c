@@ -146,7 +146,18 @@
         printf("-----------------CARTAS CADATRADAS------------------\n");
 
 
+//COMPARAÇÃO DE CARTAS (01)X(02):
 
+printf("\n");
+printf("----------BATALHA DE CARTAS-----------");
+printf("Se receber valor (1) carta 01 vence. Se receber valor (0) carta 02 vence. \n");
+printf("População: %f\n", populacao1 > populacao2);
+printf("Área Total: %f\n", area1 > area2);
+printf("PIB: %f\n", pib1 > pib2);
+printf("Pontos Turísticos: %d\n", nturismo1 > nturismo2);
+printf("Densidade Populacional: %f\n", densidade_populacional1 < densidade_populacional2);
+printf("PIB per Capita: %f\n", pib_per_capita1 > pib_per_capita2 );
+printf("Super-Poder: %f", superpoder_1 > superpoder_2);
 
 return 0;
 
