@@ -13,7 +13,7 @@
         float populacao1, area1, pib1;
         int nturismo1;
         float densidade_populacional1, pib_per_capita1, inverso_densidade_populacional1;
-        long double superpoder01;
+        double superpoder_1;
 
 
         //ENTRADA DE DADOS_01:
@@ -51,10 +51,9 @@
 
         densidade_populacional1 = populacao1 / area1;
         pib_per_capita1 = pib1 / populacao1;
-        float inverso_densidade_populacional1;
+        inverso_densidade_populacional1;
         inverso_densidade_populacional1 = 1 / densidade_populacional1;
-        long double super_poder1;
-        super_poder1 = populacao1 + area1 + pib1 + (float) nturismo1 +
+        superpoder_1 = populacao1 + area1 + pib1 + (float) nturismo1 +
         pib_per_capita1 + inverso_densidade_populacional1;
 
         
@@ -71,7 +70,7 @@
             printf("Densidade Populacional: %.3f hab/km²\n", populacao1 / area1);
             printf("PIB per Capita: %.3f reais\n", pib1 / populacao1);
             printf ("Inverso Densidade Populacional: %.3f\n", inverso_densidade_populacional1);
-            printf("Super Poder: %.3lf pontos\n", super_poder1);
+            printf("Super Poder: %.3f pontos\n", superpoder_1);
             printf("Computando..... ");
             printf("CARTA (01) CADASTRADA COM SUCESSO!\n");
             printf("\n");
