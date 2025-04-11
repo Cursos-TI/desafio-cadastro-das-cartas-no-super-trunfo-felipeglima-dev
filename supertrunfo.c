@@ -90,7 +90,7 @@
     //ENTRADA DE DADOS_02:
 
     printf("\n");
-    printf("CADASTRE SUA 2º CARTA(01)! \n");
+    printf("CADASTRE SUA 2º CARTA(02)! \n");
     printf("\n");
 
     printf("Insira o código do Estado: ");
