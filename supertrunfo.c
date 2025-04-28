@@ -159,6 +159,47 @@ printf("Densidade Populacional: %f\n", densidade_populacional1 < densidade_popul
 printf("PIB per Capita: %f\n", pib_per_capita1 > pib_per_capita2 );
 printf("Super-Poder: %f", superpoder_1 > superpoder_2);
 
+//COMPARAÇÃO DE CARTAS(01)X(02) POR DECISÃO COMPOSTA:
+
+printf("\n");
+printf("----------BATALHA DE CARTAS-----------");
+
+if(populacao1>populacao2){
+    printf("Carta Nº1 venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!");
+}
+if(area1>area2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+if(pib1>pib2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+if(nturismo1>nturismo2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+if(densidade_populacional1>densidade_populacional2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+if(pib_per_capita1>pib_per_capita2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+if(superpoder_1>superpoder_2){
+    printf("Carta Nº1 Venceu!!\n");
+} else{
+    printf("Carta Nº2 venceu!!\n");
+}
+
 return 0;
 
 }
