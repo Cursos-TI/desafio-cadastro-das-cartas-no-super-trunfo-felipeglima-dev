@@ -146,7 +146,7 @@
         printf("-----------------CARTAS CADATRADAS------------------\n");
 
 
-//COMPARAÇÃO DE CARTAS (01)X(02):
+//COMPARAÇÃO DE CARTAS (01)X(02) POR OPERADORES RELACIONAIS:
 
 printf("\n");
 printf("----------BATALHA DE CARTAS-----------");
