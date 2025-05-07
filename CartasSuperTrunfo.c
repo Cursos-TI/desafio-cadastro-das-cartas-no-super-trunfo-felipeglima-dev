@@ -249,7 +249,7 @@
 
                         int escolha;
 
-                        printf("---Inciando---:\n");
+                        printf("---Iniciando---:\n");
                         printf("\n");
                         printf("Escolha um dos atributos abaixo para batalhar:\n");
                         printf("1. População:\n", populacao1, populacao2);
