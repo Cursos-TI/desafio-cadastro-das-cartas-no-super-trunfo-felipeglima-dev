@@ -7,6 +7,7 @@
         /*Menu Interativo por Switch*/
 
         int opcao;
+        int regras1;
 
         printf("\n");
         printf("---------SUPER TRUNFO: MENU PRINCIPAL----------\n");
@@ -18,7 +19,21 @@
     
         switch(opcao){
             case 1: 
-                printf("Insira as informações correspondentes de duas cartas Super Trunfo para iniciar as batalhas.\n");
+            printf("Regras\n");
+            printf("Digite a opção entre opção 1 e 2.\n");
+            scanf("%d", &regras1);
+                    switch (regras1){
+                    case 1: 
+                            printf("Regra 1.\n");
+                            printf("Você deve inserir as informações correspondentes à duas cartas de Super Trunfo.\n");
+                    break;
+                    case 2:
+                            printf("Regra 2.\n");
+                            printf("Você deve escolher um dos atributos para batalhar quando for solicitado.\n");
+                    break;
+                    default: 
+                            printf("Escolha outra opção.\n");
+                    }
             case 2: 
                 printf("Iniciando o jogo...\n");
 
@@ -215,11 +230,50 @@
                 printf("A segunda carta venceu!!\n");
                 }
 
+        
+
+    /* Menu secundário para batalha de cartas:*/
+    
+    printf("\n");
+    printf("----------2º Batalha-----------\n");
+    printf("\n");
+
+    int escolha;
+
+    printf("---Escolha um dos atributos para batalhar---:\n");
+    printf("\n");
+
+    switch(escolha){
+        case 1:
+            printf("1. População:\n", populacao1, populacao2);
+        break;
+        case 2:
+            printf("2. Área Total:\n", area1, area2);
+        break;
+        case 3:
+            printf("3. PIB:\n", pib1, pib2);
+        break;
+        case 4:
+            printf("4. Número de Pontos Turísticos;\n", nturismo1, nturismo2);
+        break;
+        case 5:
+            printf("5. Densidade Demográfica:\n", densidade_populacional1, densidade_populacional2);
+        break;
+        default:
+            printf("Opção Inválida.\n");
+
+
+    }
+
+
+
+
             case 3:
-            printf("Obrigado por participar. Saindo...\n");
+                printf("Obrigado por participar. Saindo...\n");
+            break;
+            default:
+                printf("opção inválida\n");
 
-
-            
         }
         
 
