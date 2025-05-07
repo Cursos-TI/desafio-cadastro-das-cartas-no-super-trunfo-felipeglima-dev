@@ -12,7 +12,7 @@
         printf("---------SUPER TRUNFO: MENU PRINCIPAL----------\n");
         printf("Escolha uma das opções abaixo:\n");
         printf("1. Regras:\n");
-        printf("2. Iiniciar Jogo:\n");
+        printf("2. Iniciar Jogo:\n");
         printf("3. Sair:\n");
         scanf("%d",&opcao);
     
@@ -26,6 +26,7 @@
         /* Variáveis da Carta 01*/
 
         char codigo_estado1[90];
+        char pais1[90];
         char estado1[90];
         char codigo_cidade1[90];
         char cidade1[100];
@@ -36,10 +37,13 @@
 
         /*Entrada de dados para Carta 01:*/
 
-        printf("#______________Cadastrando suas cartas______________#\n");
+        printf("#______________Cadastrando suas cartas_______________#\n");
         printf("\n");
         printf("---Cadastre sua primeira carta---\n");
         printf("\n");
+
+        printf("Insira o país da correspondente:\n");
+        scanf("&[^\n]", pais1);
 
         printf("Insira o código do Estado de A a C: Ex.(A): ");
         scanf(" %[^\n]", codigo_estado1);
@@ -76,6 +80,7 @@
         
         /*Saída de Dados da Carta 01:*/
 
+            printf("País: %s\n", pais1);
             printf("Código do Estado: %s\n", codigo_estado1);
             printf("Nome do Estado: %s\n", estado1);
             printf("Código da Carta: %s\n", codigo_cidade1);
@@ -96,6 +101,7 @@
         /* Variáveis da carta 02:*/
 
         char codigo_estado2[90];
+        char pais2[90];
         char estado2[90];
         char codigo_cidade2[90];
         char cidade2[100];
@@ -110,6 +116,9 @@
         printf("\n");
         printf("---Cadastre sua segunda carta---\n");
         printf("\n");
+
+        printf("Insira o país correspondente:\n");
+        scanf("%[^\n]", pais2);
 
         printf("Insira o código do Estado entre D e F: Ex.(D): ");
         scanf(" %[^\n]", codigo_estado2);
@@ -146,6 +155,7 @@
 
         /*Saída de dados da carta 02:*/
 
+            printf("País: %s\n", pais2);
             printf("Código do Estado: %s\n", codigo_estado2);
             printf("Nome do Estado: %s\n", estado2);
             printf("Código da Carta: %s\n", codigo_cidade2);
@@ -164,28 +174,15 @@
             printf("-----------------Cartas Cadastradas------------------\n");
 
 
-            /* Comparação de cartas por operadores relacionais:*/
-
-                printf("\n");
-                printf("----------1º Batalha-----------");
-                printf("Se receber valor (1) a primeira carta vence. Se receber valor (0) a segunda carta vence. \n");
-                printf("População: %f\n", populacao1 > populacao2);
-                printf("Área Total: %f\n", area1 > area2);
-                printf("PIB: %f\n", pib1 > pib2);
-                printf("Pontos Turísticos: %d\n", nturismo1 > nturismo2);
-                printf("Densidade Populacional: %f\n", densidade_populacional1 < densidade_populacional2);
-                printf("PIB per Capita: %f\n", pib_per_capita1 > pib_per_capita2 );
-                printf("Super-Poder: %f", superpoder_1 > superpoder_2);
-
             /* Comparação de cartas por decisão composta:*/
 
                 printf("\n");
-                printf("----------2º Batalha-----------");
+                printf("----------1º Batalha-----------\n");
 
                 if(populacao1>populacao2){
                 printf("A primeira carta venceu!!\n");
                 } else{
-                printf("A segunda carta venceu!!");
+                printf("A segunda carta venceu!!\n");
                 }
                 if(area1>area2){
                 printf("A primeira carta Venceu!!\n");
@@ -220,6 +217,9 @@
 
             case 3:
             printf("Obrigado por participar. Saindo...\n");
+
+
+            
         }
         
 
