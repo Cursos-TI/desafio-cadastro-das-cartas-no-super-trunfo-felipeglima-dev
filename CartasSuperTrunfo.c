@@ -1,13 +1,22 @@
+        /*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL AVENTURERO.*/
+
 #include<stdio.h>
 #include<locale.h>
    
     int main(){
+
+        /*Localizando formato de código para eventuais problemas de acentuação.
+        */
         setlocale(LC_ALL, "Portuguese_Brazil");
 
-        /*Menu Interativo por Switch*/
+        /*Menu Interativo por Switch para navegar pelo jogo Super Trunfo*/
+
+        /* Variáveis do Menu Principal:*/
 
         int opcao;
         int regras1;
+
+        /*Saída inicial com as opções para usuário.*/
 
         printf("\n");
         printf("---------SUPER TRUNFO: MENU PRINCIPAL----------\n");
@@ -17,6 +26,8 @@
         printf("3. Sair:\n");
         scanf("%d",&opcao);
     
+        /*Bloco de código do menu principal. Modo switch.*/
+
         switch(opcao){
             case 1: 
             printf("Regras\n");
@@ -25,20 +36,19 @@
                     switch (regras1){
                     case 1: 
                             printf("Regra 1.\n");
-                            printf("Você deve inserir as informações correspondentes às duas cartas de Super Trunfo.\n");
+                            printf("Você deve inserir as informações correspondentes às duas cartas Super Trunfo quando for solicitado pelo Terminal.\n");
                     break;
                     case 2:
                             printf("Regra 2.\n");
-                            printf("Você deve escolher um dos atributos para batalhar quando for solicitado pelo terminal.\n");
+                            printf("Você deverá escolher um dos atributos para batalhar quando for solicitado pelo terminal.\n");
                     break;
                     default: 
-                            printf("Escolha outra opção.\n");
+                            printf("Operação Inválida. Escolha as opções entre 1 e 2.\n");
                     }
             case 2: 
                 printf("Iniciando o jogo...\n");
 
-
-        /* Variáveis da Carta 01*/
+        /* Variáveis referentes à Primeira Carta.*/
 
                     char codigo_estado1[90];
                     char pais1[90];
@@ -50,7 +60,7 @@
                     float densidade_populacional1, pib_per_capita1, inverso_densidade_populacional1;
                     double superpoder_1;
 
-        /*Entrada de dados para Carta 01:*/
+        /*Entrada de dados pelo usuário da Primeira Carta.*/
 
                     printf("#______________Cadastrando suas cartas_______________#\n");
                     printf("\n");
@@ -84,7 +94,7 @@
                     printf("Nº de Pontos Turísticos: ");
                     scanf("%d", &nturismo1);
 
-        /* Cálculos para Carta 01: */
+        /* Cálculos referentes à Primeira Carta. */
 
                     densidade_populacional1 = populacao1 / area1;
                     pib_per_capita1 = pib1 / populacao1;
@@ -93,7 +103,7 @@
                     pib_per_capita1 + inverso_densidade_populacional1;
 
         
-        /*Saída de Dados da Carta 01:*/
+        /*Saída de Dados da Primeira Carta.*/
 
                     printf("País: %s\n", pais1);
                     printf("Código do Estado: %s\n", codigo_estado1);
@@ -113,7 +123,7 @@
                     printf("\n");
                     printf("-----------------------------------\n");
 
-        /* Variáveis da carta 02:*/
+        /* Variáveis referentes à Segunda Carta.*/
 
                     char codigo_estado2[90];
                     char pais2[90];
@@ -126,7 +136,7 @@
                     double superpoder_2;
 
 
-        /* Entrada de dados da carta 02:*/
+        /* Entrada de dados pelo usuário da Segunda carta.*/
 
                     printf("\n");
                     printf("---Cadastre sua segunda carta---\n");
@@ -159,7 +169,7 @@
                     printf("Nº de Pontos Turísticos: ");
                     scanf("%d", &nturismo2);
 
-        /*Cálculos da Carta 02:*/
+        /*Cálculos referentes à Segunda Carta.*/
 
                     densidade_populacional2 = populacao2 / area2;
                     pib_per_capita2 = pib2 / populacao2;
@@ -168,7 +178,7 @@
                     pib_per_capita2 + inverso_densidade_populacional2;
 
 
-        /*Saída de dados da carta 02:*/
+        /*Saída de dados referentes à Segunda Carta:*/
 
                     printf("País: %s\n", pais2);
                     printf("Código do Estado: %s\n", codigo_estado2);
@@ -189,7 +199,7 @@
                     printf("-----------------Cartas Cadastradas------------------\n");
 
 
-            /* Comparação de cartas por decisão composta:*/
+            /* Comparação das cartas por decisão composta:*/
 
                     printf("\n");
                     printf("----------1º Batalha: Composta-----------\n");
@@ -241,7 +251,7 @@
 
                         printf("---Inciando---:\n");
                         printf("\n");
-                        printf("Escolha um dos atributos abaixo (1-5) para batalhar:\n");
+                        printf("Escolha um dos atributos abaixo para batalhar:\n");
                         printf("1. População:\n", populacao1, populacao2);
                         printf("2. Área Total:\n", area1, area2);
                         printf("3. PIB:\n", pib1, pib2);
@@ -253,10 +263,31 @@
                             case 1:
                                 printf("1. População:\n", populacao1, populacao2);
                             if(populacao1 == populacao2){
+                                printf("Atributo escolhido - população:\n");
+                                prinft("Primeira carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("População: %f\n", populacao1);
+                                prinft("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("População: %f\n", populacao2);
                                 printf("----Empate!----\n");
                             } else if (populacao1 > populacao2){
+                                printf("Atributo escolhido - população:\n");
+                                prinft("Primeira carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("População: %f\n", populacao1);
+                                prinft("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("População: %f\n", populacao2);
                                 printf("A primeira carta venceu!\n");
                             } else {
+                                printf("Atributo escolhido - população:\n");
+                                prinft("Primeira carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("População: %f\n", populacao1);
+                                prinft("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("População: %f\n", populacao2);
                                 printf("A segunda carta venceu!\n");
                             }
                             break;
@@ -287,7 +318,8 @@
                             } else if (nturismo1 > nturismo2){
                                 printf("A primeira carta venceu!\n");
                             } else {
-                                printf("A segunda carta venceu!\n"); 
+                                printf("A segunda carta venceu!\n");
+                            }
                             break;
                             case 5:
                                 printf("5. Densidade Demográfica:\n", densidade_populacional1, densidade_populacional2);
@@ -298,6 +330,8 @@
                             } else {
                                 printf("A segunda carta venceu!\n");
                             break;
+                            default:
+                                printf("Operação Inválida. Escolha uma opção de 1-5\n");
                             }
                 }
 
