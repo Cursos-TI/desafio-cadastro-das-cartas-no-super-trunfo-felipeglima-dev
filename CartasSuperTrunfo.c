@@ -263,42 +263,61 @@
                             case 1:
                                 printf("1. População:\n", populacao1, populacao2);
                             if(populacao1 == populacao2){
-                                printf("Atributo escolhido - população:\n");
-                                prinft("Primeira carta:\n");
+                                printf("Atributo escolhido - População:\n");
+                                prinft("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
-                                prinft("Segunda carta:\n");
+                                printf("------versus------\n");
+                                prinft("Segunda Carta:\n");
                                 printf("País %s\n", pais2);
                                 printf("População: %f\n", populacao2);
                                 printf("----Empate!----\n");
                             } else if (populacao1 > populacao2){
-                                printf("Atributo escolhido - população:\n");
-                                prinft("Primeira carta:\n");
+                                printf("Atributo escolhido - População:\n");
+                                prinft("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
-                                prinft("Segunda carta:\n");
+                                printf("------versus------\n");
+                                prinft("Segunda Carta:\n");
                                 printf("País %s\n", pais2);
                                 printf("População: %f\n", populacao2);
-                                printf("A primeira carta venceu!\n");
+                                printf("A Primeira Carta venceu!\n");
                             } else {
-                                printf("Atributo escolhido - população:\n");
-                                prinft("Primeira carta:\n");
+                                printf("Atributo Escolhido - população:\n");
+                                prinft("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
+                                printf("------versus------\n");
                                 prinft("Segunda carta:\n");
                                 printf("País %s\n", pais2);
                                 printf("População: %f\n", populacao2);
-                                printf("A segunda carta venceu!\n");
+                                printf("A Segunda Carta venceu!\n");
                             }
                             break;
                             case 2:
                                 printf("2. Área Total:\n", area1, area2);
                             if(area1 == area2){
+                                printf("Atributo Escolhido - Área Total:\n");
+                                prinft("Primeira carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Área Total: %f\n", area1);
+                                printf("------versus------\n");
+                                prinft("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Área Total: %f\n", area2);
                                 printf("----Empate!----\n");
                             } else if (area1 > area2){
-                                printf("A primeira carta venceu!\n");
+                                printf("Atributo Escolhido - Área Total:\n");
+                                prinft("Primeira carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Área Total: %f\n", area1);
+                                printf("------versus------\n");
+                                prinft("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Área Total: %f\n", area2);
+                                printf("A Primeira carta venceu!\n");
                             } else {
-                                printf("A segunda carta venceu!\n");
+                                printf("A Segunda carta venceu!\n");
                             }
                             break;
                             case 3:
