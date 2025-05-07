@@ -1,4 +1,4 @@
-        /*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL AVENTURERO.*/
+/*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL AVENTURERO.*/
 
 #include<stdio.h>
 #include<locale.h>
@@ -250,12 +250,13 @@
                         int escolha;
 
                         printf("---Iniciando---:\n");
+                        printf("\n");
                         printf("Escolha um dos atributos abaixo para batalhar:\n");
-                        printf("1. População:\n");
-                        printf("2. Área Total:\n");
-                        printf("3. PIB:\n");
-                        printf("4. Número de Pontos Turísticos;\n");
-                        printf("5. Densidade Demográfica:\n");
+                        printf("1. População:\n", populacao1, populacao2);
+                        printf("2. Área Total:\n", area1, area2);
+                        printf("3. PIB:\n", pib1, pib2);
+                        printf("4. Número de Pontos Turísticos;\n", nturismo1, nturismo2);
+                        printf("5. Densidade Demográfica:\n", densidade_populacional1, densidade_populacional2);
                         scanf("%d", &escolha);
 
                         switch(escolha){
