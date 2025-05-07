@@ -4,7 +4,7 @@
     int main(){
         setlocale(LC_ALL, "Portuguese_Brazil");
 
-        //VARIÁVEIS_01:
+        //VARIÁVEIS_CARTA 01: 
 
         char codigo_estado1[90];
         char estado1[90];
@@ -16,7 +16,7 @@
         double superpoder_1;
 
 
-        //ENTRADA DE DADOS_01:
+        //ENTRADA DE DADOS DA CARTA 01:
 
         printf("#______________#### DESAFIO SUPERTRUNFO ####______________#\n");
         printf("\n");
@@ -47,7 +47,7 @@
         printf("Nº de Pontos Turísticos: ");
         scanf("%d", &nturismo1);
 
-        //CÁLCULOS_01:
+        //CÁLCULOS DA CARTA 01:
 
         densidade_populacional1 = populacao1 / area1;
         pib_per_capita1 = pib1 / populacao1;
@@ -56,7 +56,7 @@
         pib_per_capita1 + inverso_densidade_populacional1;
 
         
-        //SAÍDA DE DADOS_01:
+        //SAÍDA DE DADOS DA CARTA 01:
 
             printf("Código do Estado: %s\n", codigo_estado1);
             printf("Nome do Estado: %s\n", estado1);
@@ -75,7 +75,7 @@
             printf("\n");
             printf("-----------------------------------\n");
 
-    //VARIÁVEIS_02:
+    //VARIÁVEIS DA CARTA 02:
 
     char codigo_estado2[90];
     char estado2[90];
@@ -87,7 +87,7 @@
     double superpoder_2;
 
 
-    //ENTRADA DE DADOS_02:
+    //ENTRADA DE DADOS DA CARTA 02:
 
     printf("\n");
     printf("CADASTRE SUA 2º CARTA(02)! \n");
@@ -117,7 +117,7 @@
     printf("Nº de Pontos Turísticos: ");
     scanf("%d", &nturismo2);
 
-    //CÁLCULOS_02:
+    //CÁLCULOS DA CARTA 02:
 
     densidade_populacional2 = populacao2 / area2;
     pib_per_capita2 = pib2 / populacao2;
@@ -126,7 +126,7 @@
     pib_per_capita2 + inverso_densidade_populacional2;
 
 
-    //SAÍDA DE DADOS_02:
+    //SAÍDA DE DADOS DA CARTA 02:
 
         printf("Código do Estado: %s\n", codigo_estado2);
         printf("Nome do Estado: %s\n", estado2);
@@ -149,7 +149,7 @@
 //COMPARAÇÃO DE CARTAS (01)X(02) POR OPERADORES RELACIONAIS:
 
 printf("\n");
-printf("----------BATALHA DE CARTAS-----------");
+printf("----------1º BATALHA DE CARTAS-----------");
 printf("Se receber valor (1) carta 01 vence. Se receber valor (0) carta 02 vence. \n");
 printf("População: %f\n", populacao1 > populacao2);
 printf("Área Total: %f\n", area1 > area2);
@@ -162,7 +162,7 @@ printf("Super-Poder: %f", superpoder_1 > superpoder_2);
 //COMPARAÇÃO DE CARTAS(01)X(02) POR DECISÃO COMPOSTA:
 
 printf("\n");
-printf("----------BATALHA DE CARTAS-----------");
+printf("----------2º BATALHA DE CARTAS-----------");
 
 if(populacao1>populacao2){
     printf("Carta Nº1 venceu!!\n");
@@ -199,6 +199,16 @@ if(superpoder_1>superpoder_2){
 } else{
     printf("Carta Nº2 venceu!!\n");
 }
+
+//MENU INTERATIVO DO JOGO SUPER-TRUNFO:
+printf("\n");
+printf("----------MENU PRINCIPAL-----------");
+printf("#ESCOLHA UMA OPÇÃO#\n");
+    printf("1. REGRAS:\n");
+    printf("2. INICIAR JOGO:\n");
+    printf("3. SAIR:\n");
+    scanf("%d",&opcao);
+
 
 return 0;
 
