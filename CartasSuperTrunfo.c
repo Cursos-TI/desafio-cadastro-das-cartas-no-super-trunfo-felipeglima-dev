@@ -58,7 +58,7 @@
         printf("\n");
 
         printf("Insira o país da correspondente:\n");
-        scanf("&[^\n]", pais1);
+        scanf(" %[^\n]", pais1);
 
         printf("Insira o código do Estado de A a C: Ex.(A): ");
         scanf(" %[^\n]", codigo_estado1);
@@ -133,7 +133,7 @@
         printf("\n");
 
         printf("Insira o país correspondente:\n");
-        scanf("%[^\n]", pais2);
+        scanf(" %[^\n]", pais2);
 
         printf("Insira o código do Estado entre D e F: Ex.(D): ");
         scanf(" %[^\n]", codigo_estado2);
@@ -240,15 +240,32 @@
 
     int escolha;
 
-    printf("---Escolha um dos atributos para batalhar---:\n");
+    printf("---Inciando---:\n");
     printf("\n");
+    printf("Escolha um dos atributos para batalhar:\n");
+    scanf("%d", &escolha);
+
 
     switch(escolha){
         case 1:
             printf("1. População:\n", populacao1, populacao2);
+            if(populacao1 == populacao2){
+                printf("----Empate!----\n");
+            } else if (populacao1 > populacao2){
+                printf("A primeira carta venceu!\n");
+            } else {
+                printf("A segunda carta venceu!\n");
+            }
         break;
         case 2:
             printf("2. Área Total:\n", area1, area2);
+            if(area1 == area2){
+                printf("----Empate!----\n");
+            } else if (area1 > area2){
+                printf("A primeira carta venceu!\n");
+            } else {
+                printf("A segunda carta venceu!\n");
+            }
         break;
         case 3:
             printf("3. PIB:\n", pib1, pib2);
