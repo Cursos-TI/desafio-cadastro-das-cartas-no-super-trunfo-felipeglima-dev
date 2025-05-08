@@ -67,31 +67,31 @@
                     printf("---Cadastre sua primeira carta---\n");
                     printf("\n");
 
-                    printf("Insira o país correspondente: ");
+                    printf("Insira o país correspondente:\n");
                     scanf(" %[^\n]", pais1);
 
-                    printf("Insira o código do Estado de A a C: Ex.(A): ");
+                    printf("Insira o código do Estado de A a C: Ex.(A):\n");
                     scanf(" %[^\n]", codigo_estado1);
         
-                    printf("Insira o Nome do Estado: ");
+                    printf("Insira o Nome do Estado:\n");
                     scanf(" %[^\n]", estado1);
 
-                    printf("Insira o Código da Carta de A a C entre 0 e 4: Ex.(A01): "); 
+                    printf("Insira o Código da Carta de A a C entre 0 e 4: Ex.(A01):\n"); 
                     scanf(" %[^\n]", codigo_cidade1);
 
-                    printf("Insira o nome da cidade: "); 
+                    printf("Insira o nome da cidade:\n"); 
                     scanf(" %[^\n]", cidade1);
        
-                    printf("Insira o Nº Populacional: "); 
+                    printf("Insira o Nº Populacional:\n"); 
                     scanf("%f", &populacao1);
 
-                    printf("Insira a Área Total da cidade: ");
+                    printf("Insira a Área Total da cidade:\n");
                     scanf( "%f", &area1);
 
-                    printf("Insira o PIB referente: ");
+                    printf("Insira o PIB referente:\n");
                     scanf("%f", &pib1);
 
-                    printf("Nº de Pontos Turísticos: ");
+                    printf("Nº de Pontos Turísticos:\n");
                     scanf("%d", &nturismo1);
 
         /* Cálculos referentes à Primeira Carta. */
@@ -141,31 +141,31 @@
                     printf("---Cadastre sua segunda carta---\n");
                     printf("\n");
 
-                    printf("Insira o país correspondente: ");
+                    printf("Insira o país correspondente:\n");
                     scanf(" %[^\n]", pais2);
 
-                    printf("Insira o código do Estado entre D e F: Ex.(D): ");
+                    printf("Insira o código do Estado entre D e F: Ex.(D):\n");
                     scanf(" %[^\n]", codigo_estado2);
 
-                    printf("Insira o Nome do Estado: ");
+                    printf("Insira o Nome do Estado:\n");
                     scanf(" %[^\n]", estado2);
 
-                    printf("Insira o Código da Carta de D e F entre 5 a 7: Ex.(D02): "); 
+                    printf("Insira o Código da Carta de D e F entre 5 a 7: Ex.(D02):\n"); 
                     scanf(" %[^\n]", codigo_cidade2);
 
-                    printf("Insira o nome da cidade: "); 
+                    printf("Insira o nome da cidade:\n"); 
                     scanf(" %[^\n]", cidade2);
 
-                    printf("Insira o Nº Populacional: "); 
+                    printf("Insira o Nº Populacional:\n"); 
                     scanf("%f", &populacao2);
 
-                    printf("Insira a Área Total da cidade: ");
+                    printf("Insira a Área Total da cidade:\n");
                     scanf( "%f", &area2);
 
-                    printf("Insira o PIB referente: ");
+                    printf("Insira o PIB referente:\n");
                     scanf("%f", &pib2);
 
-                    printf("Nº de Pontos Turísticos: ");
+                    printf("Nº de Pontos Turísticos:\n");
                     scanf("%d", &nturismo2);
 
         /*Cálculos referentes à Segunda Carta.*/
@@ -201,7 +201,7 @@
             /* Comparação das cartas por decisão composta:*/
 
                     printf("\n");
-                    printf("----------1º Batalha: Composta-----------\n");
+                    printf("----------1º Batalha Composta-----------\n");
 
                     if(populacao1>populacao2){
                     printf("A primeira carta venceu!!\n");
@@ -239,7 +239,6 @@
                     printf("A segunda carta venceu!!\n");
                     }
 
-
             /* Menu secundário para batalha de cartas escolhidas pelo usuário:*/
     
                         printf("\n");
@@ -260,9 +259,8 @@
 
                         switch(escolha){
                             case 1:
-                                printf("1.População:\n", populacao1, populacao2);
+                                printf("1.Atributo Escolhido: População:\n");
                             if(populacao1 == populacao2){
-                                printf("Atributo escolhido - População:\n");
                                 printf("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
@@ -272,7 +270,6 @@
                                 printf("População: %f\n", populacao2);
                                 printf("----Empate!----\n");
                             } else if (populacao1 > populacao2){
-                                printf("Atributo escolhido - População:\n");
                                 printf("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
@@ -282,7 +279,6 @@
                                 printf("População: %f\n", populacao2);
                                 printf("A Primeira Carta venceu!\n");
                             } else {
-                                printf("Atributo Escolhido - população:\n");
                                 printf("Primeira Carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("População: %f\n", populacao1);
