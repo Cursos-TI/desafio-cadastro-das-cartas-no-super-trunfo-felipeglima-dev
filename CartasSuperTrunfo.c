@@ -45,9 +45,10 @@
                     break;
                     default: 
                             printf("Operação Inválida! Por favor, escolha opções entre 1 e 2.\n");
+                    break;
                     }
             case 2: 
-                    printf("---------INICIANDO O JOGO----------\n");
+            printf("---------INICIANDO O JOGO----------\n");
 
         /* Variáveis referentes à Primeira Carta.*/
 
@@ -204,37 +205,37 @@
                     printf("\n");
                     printf("----------Iniciando 1º Batalha Composta-----------\n");
 
-                    if(populacao1>populacao2){
+                    if(populacao1 > populacao2){
                     printf("A primeira carta venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(area1>area2){
+                    if(area1 > area2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(pib1>pib2){
+                    if(pib1 > pib2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(nturismo1>nturismo2){
+                    if(nturismo1 > nturismo2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(densidade_populacional1<densidade_populacional2){
+                    if(densidade_populacional1 < densidade_populacional2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(pib_per_capita1>pib_per_capita2){
+                    if(pib_per_capita1 > pib_per_capita2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
                     }
-                    if(superpoder_1>superpoder_2){
+                    if(superpoder_1 > superpoder_2){
                     printf("A primeira carta Venceu!!\n");
                     } else{
                     printf("A segunda carta venceu!!\n");
@@ -419,8 +420,9 @@
                             break;
                             default:
                                 printf("Operação Inválida. Por favor, escolha uma opção de 1 a 5.\n");
+                            break;
+                                }
                             }
-                }
             /*Continuação do Switch do Menu Principal.*/
 
             break;
@@ -429,7 +431,8 @@
                 printf("---------Finalizando----------\n");
             break;
             default:
-            printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
+                printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
+            break;
         }
 
             /* Fim do programa.*/
