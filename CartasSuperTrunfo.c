@@ -290,9 +290,8 @@
                             }
                             break;
                             case 2:
-                                printf("2.Área Total:\n");
+                                printf("2.Atributo Escolhido: Área Total:\n");
                             if(area1 == area2){
-                                printf("Atributo Escolhido - Área Total:\n");
                                 printf("Primeira carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("Área Total: %f\n", area1);
@@ -302,7 +301,6 @@
                                 printf("Área Total: %f\n", area2);
                                 printf("----Empate!----\n");
                             } else if (area1 > area2){
-                                printf("Atributo Escolhido - Área Total:\n");
                                 printf("Primeira carta:\n");
                                 printf("País %s\n", pais1);
                                 printf("Área Total: %f\n", area1);
@@ -312,16 +310,44 @@
                                 printf("Área Total: %f\n", area2);
                                 printf("A Primeira carta venceu!\n");
                             } else {
-                                printf("A Segunda carta venceu!\n");
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Área Total: %f\n", area1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Área Total: %f\n", area2);
+                                printf("A Segunda Carta venceu!\n");
                             }
                             break;
                             case 3:
-                                printf("3.PIB:\n");
+                            printf("2.Atributo Escolhido: PIB:\n");
                             if(pib1 == pib2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("PIB: %f\n", pib1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("PIB: %f\n", pib2);
                                 printf("----Empate!----\n");
                             } else if (pib1 > pib2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("PIB: %f\n", pib1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("PIB: %f\n", pib2);
                                 printf("A primeira carta venceu!\n");
                             } else {
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("PIB: %f\n", pib1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("PIB: %f\n", pib2);
                                 printf("A segunda carta venceu!\n");
                             }
                             break;
