@@ -200,51 +200,10 @@
                     printf("-----------------Você já pode batalhar!------------------\n");
 
 
-            /* Comparação das cartas por decisão composta:*/
-
-                    printf("\n");
-                    printf("----------Iniciando 1º Batalha Composta-----------\n");
-
-                    if(populacao1 > populacao2){
-                    printf("A primeira carta venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(area1 > area2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(pib1 > pib2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(nturismo1 > nturismo2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(densidade_populacional1 < densidade_populacional2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(pib_per_capita1 > pib_per_capita2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-                    if(superpoder_1 > superpoder_2){
-                    printf("A primeira carta Venceu!!\n");
-                    } else{
-                    printf("A segunda carta venceu!!\n");
-                    }
-
             /* Menu secundário para batalha de cartas escolhidas pelo usuário:*/
     
                         printf("\n");
-                        printf("----------Iniciando 2º Batalha-----------\n");
+                        printf("----------Iniciando 1º Batalha-----------\n");
                         printf("\n");
 
                         int escolha;
@@ -434,6 +393,12 @@
                 printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
             break;
         }
+
+
+            /*Início do bloco de implementação do nível mestre do Tema 2.*/
+
+
+
 
             /* Fim do programa.*/
 
