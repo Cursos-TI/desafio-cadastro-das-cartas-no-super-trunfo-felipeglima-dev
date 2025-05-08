@@ -352,12 +352,33 @@
                             }
                             break;
                             case 4:
-                                printf("4.Número de Pontos Turísticos;\n");
+                                printf("4.Atributo Escolhido: Nº de Pontos Turísticos;\n");
                             if(nturismo1 == nturismo2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo2);
                                 printf("----Empate!----\n");
                             } else if (nturismo1 > nturismo2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo2);
                                 printf("A primeira carta venceu!\n");
                             } else {
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Nº de Pontos Turísticos: %f\n", nturismo2);
                                 printf("A segunda carta venceu!\n");
                             }
                             break;
