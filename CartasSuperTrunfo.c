@@ -247,6 +247,8 @@
 
                         int escolha;
 
+            /*Múltipla escolha de atributos para o usuário.*/
+
                         printf("---Iniciando---:\n");
                         printf("\n");
                         printf("Escolha um dos atributos abaixo para batalhar:\n");
@@ -256,6 +258,8 @@
                         printf("4. Número de Pontos Turísticos;\n");
                         printf("5. Densidade Demográfica:\n");
                         scanf("%d", &escolha);
+
+            /*Switch de atributos para batalha de duas cartas.*/
 
                         switch(escolha){
                             case 1:
@@ -416,6 +420,7 @@
                                 printf("Operação Inválida. Escolha uma opção de 1-5\n");
                             }
                 }
+            /*Continuação do Switch do Menu Principal.*/
 
             break;
             case 3:
@@ -424,6 +429,8 @@
             default:
                 printf("opção inválida\n");
         }
+        
+            /* Fim do programa.*/
 
 return 0;
 
