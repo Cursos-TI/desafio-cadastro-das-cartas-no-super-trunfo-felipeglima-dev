@@ -383,12 +383,33 @@
                             }
                             break;
                             case 5:
-                                printf("5.Densidade Demográfica:\n");
+                                printf("5.Atributo Escolhido: Densidade Demográfica:\n");
                             if(densidade_populacional1 == pib2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional2);
                                 printf("----Empate!----\n");
                             } else if (densidade_populacional1 < densidade_populacional2){
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional2);
                                 printf("A primeira carta venceu!\n");
                             } else {
+                                printf("Primeira Carta:\n");
+                                printf("País %s\n", pais1);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional1);
+                                printf("------versus------\n");
+                                printf("Segunda carta:\n");
+                                printf("País %s\n", pais2);
+                                printf("Densidade Demográfica: %f\n", densidade_populacional2);
                                 printf("A segunda carta venceu!\n");
                             break;
                             default:
@@ -402,7 +423,6 @@
             break;
             default:
                 printf("opção inválida\n");
-
         }
 
 return 0;
