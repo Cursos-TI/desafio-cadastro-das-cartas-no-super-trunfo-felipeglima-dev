@@ -206,9 +206,9 @@
                         printf("----------Iniciando 1º Batalha-----------\n");
                         printf("\n");
 
-                        int escolha;
+                        int escolha1;
 
-            /*Múltipla escolha de atributos para o usuário.*/
+            /*Escolha de um atributo pelo usuário para batalhar.*/
 
                         printf("---------MENU SUPER TRUNFO----------\n");
                         printf("\n");
@@ -218,11 +218,11 @@
                         printf("3. PIB:\n");
                         printf("4. Número de Pontos Turísticos;\n");
                         printf("5. Densidade Demográfica:\n");
-                        scanf("%d", &escolha);
+                        scanf("%d", &escolha1);
 
             /*Switch de atributos para batalha de duas cartas.*/
 
-                        switch(escolha){
+                        switch(escolha1){
                             case 1:
                                 printf("1. Atributo Escolhido: População:\n");
                             if(populacao1 > populacao2){
@@ -382,6 +382,70 @@
                             break;
                                 }
                             }
+
+            /*Entrada no terminal para segunda batalha entre dois atributos.*/
+            
+                        printf("\n");
+                        printf("----------Iniciando 2º Batalha-----------\n");
+                        printf("\n");        
+
+            /*Variáveis necessárias para escolha do menu da 2ª batalha.*/
+
+                        int primeiroatributo, segundoatributo;
+                        int resultado1, resultado2;
+
+
+            /*Segundo menu de batalha com escolha de dois atributos pelo usuário.*/
+
+                        printf("---------MENU SUPER TRUNFO----------\n");
+                        printf("\n");
+                        printf("Escolha dois atributos entre as opções abaixo para batalhar! \n");
+                        printf("1. Área Total:\n");
+                        printf("2. PIB:\n");
+                        printf("3. Número de Pontos Turísticos;\n");
+                        printf("4. Densidade Demográfica:\n");
+                        printf("5. Super-Poder: \n");
+                        printf("Insira o Primeiro Atributo: \n");
+                        scanf("%d", &primeiroatributo);
+
+                        switch(primeiroatributo){
+                            case 1:
+                                printf("Você escolheu o atributo Área Total. \n");
+                                resultado1 = area1 > area2 ? 1 : 0;
+                            break;
+                            case 2: 
+                                printf("Você escolheu o atributo PIB. \n");
+                                resultado1 = pib1 > pib2 ? 1 : 0;
+                            break;
+                            case 3:
+                                printf("Você escolheu o atributo Nº de Pontos Turísticos. \n");
+                                resultado1 = nturismo1 > nturismo2 ? 1 : 0;
+                            break;
+                            case 4:
+                                printf("Você escolheu o atributo Densidade Demográfica. \n");
+                                resultado1 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
+                            break;
+                            case 5:
+                                printf("Você escolheu o atributo Super-Poder. \n");
+                                resultado1 = superpoder_1 > superpoder_2 ? 1 : 0;
+                            break;
+                            default:
+                                Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
+                        }
+
+                        printf("\n");
+                        printf("Escolha o Segundo Atributo entre as opções abaixo para batalhar! \n");
+                        printf("1. Área Total:\n");
+                        printf("2. PIB:\n");
+                        printf("3. Número de Pontos Turísticos;\n");
+                        printf("4. Densidade Demográfica:\n");
+                        printf("5. Super-Poder: \n");
+                        printf("Insira o Segundo Atributo: \n");
+                        scanf("%d", &segundoatributo);
+
+
+
+
             /*Continuação do Switch do Menu Principal.*/
 
             break;
@@ -393,12 +457,6 @@
                 printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
             break;
         }
-
-
-            /*Início do bloco de implementação do nível mestre do Tema 2.*/
-
-
-
 
             /* Fim do programa.*/
 
