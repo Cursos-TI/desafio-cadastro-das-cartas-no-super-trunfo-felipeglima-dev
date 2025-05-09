@@ -443,7 +443,49 @@
                         printf("Insira o Segundo Atributo: \n");
                         scanf("%d", &segundoatributo);
 
+                            if(primeiroatributo == segundoatributo){
+                                printf("Você escolheu o mesmo atributo. Escolha um atributo diferente. \n");
+                            } else {switch(segundoatributo){
+                                    case 1:
+                                        printf("Você escolheu o atributo Área Total. \n");
+                                        resultado2 = area1 > area2 ? 1 : 0;
+                                    break;
+                                    case 2: 
+                                        printf("Você escolheu o atributo PIB. \n");
+                                        resultado2 = pib1 > pib2 ? 1 : 0;
+                                    break;
+                                    case 3:
+                                        printf("Você escolheu o atributo Nº de Pontos Turísticos. \n");
+                                        resultado2 = nturismo1 > nturismo2 ? 1 : 0;
+                                    break;
+                                    case 4:
+                                        printf("Você escolheu o atributo Densidade Demográfica. \n");
+                                        resultado2 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
+                                    break;
+                                    case 5:
+                                        printf("Você escolheu o atributo Super-Poder. \n");
+                                        resultado2 = superpoder_1 > superpoder_2 ? 1 : 0;
+                                    break;
+                                    default:
+                                        Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
+                                    }
+                                }
+            /* Soma dos dois atributos computados pelo usuário através do terminal.*/
 
+            
+
+
+
+
+            /* Bloco de comando referente à comparação dos resultados da batalha.*/
+            
+            if ( resultado1 && resultado2){
+                printf("Você venceu!\n");
+            } else if (resultado1 != resultado2){
+                printf("Empatou!\n");
+            } else {
+                printf("Você perdeu\n");
+            }
 
 
             /*Continuação do Switch do Menu Principal.*/
