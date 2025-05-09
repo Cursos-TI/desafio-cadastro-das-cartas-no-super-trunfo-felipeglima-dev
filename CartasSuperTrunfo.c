@@ -29,8 +29,7 @@
     
         /*Bloco de código do menu principal. Modo switch.*/
 
-        switch(opcao){
-            case 1: 
+        switch(opcao){ /* Início do Switch principal do jogo.*/
             printf("---------REGRAS----------\n");
             printf("---------Por favor, escolha entre a opção 1 e 2----------\n");
             scanf("%d", &regras1);
@@ -198,15 +197,15 @@
                 printf("\n");
                 printf("-----------------Você já pode batalhar!------------------\n");
 
-            /* Menu secundário para batalha de cartas escolhidas pelo usuário:*/
+        /* Menu secundário para 1ª batalha de cartas escolhidas pelo usuário:*/
     
                 printf("\n");
                 printf("----------Iniciando 1º Batalha-----------\n");
                 printf("\n");
 
-                        int escolha1;
+                        int escolha;
 
-            /*Escolha de um atributo pelo usuário para batalhar.*/
+        /*Escolha de um atributo pelo usuário para batalhar.*/
 
                     printf("---------1. MENU SUPER TRUNFO----------\n");
                     printf("\n");
@@ -216,11 +215,11 @@
                     printf("3. PIB:\n");
                     printf("4. Nº de Pontos Turísticos;\n");
                     printf("5. Densidade Demográfica:\n");
-                    scanf("%d", &escolha1);
+                    scanf("%d", &escolha);
 
-            /*Switch de atributos para batalha de duas cartas.*/
+        /*Switch de atributos para batalha de duas cartas.*/
 
-                        switch(escolha1){
+                        switch(escolha){
                             case 1:
                                 printf("1. Atributo Escolhido: População:\n");
                                 printf("Primeira Carta: País %s --- Cidade %s", pais1, cidade1);
@@ -287,191 +286,113 @@
                             } //Fim do switch de escolha da 1ª batalha.
 
 
-            /*Entrada no terminal para segunda batalha entre dois atributos.*/
+        /*Entrada no terminal para segunda batalha entre dois atributos.*/
             
                     printf("\n");
                     printf("----------Iniciando 2º Batalha-----------\n");
                     printf("\n");        
 
-            /*Variáveis necessárias para escolha do menu da 2ª batalha.*/
-
-                        int carta1atributo1, carta1atributo2, carta2atributo1, carta2atributo2;
+        /*Variáveis necessárias para escolha do menu da 2ª batalha.*/
+                        
+                        int opcao1, opcao2; 
+                        float valor1carta1, valor1carta2, valor2carta1, valor2carta2;
+                        int somacarta1, somacarta2;
                         int resultado1, resultado2;
 
+        /*Segundo menu de batalha com escolha de dois atributos pelo usuário de duas cartas.*/
 
-            /*Segundo menu de batalha com escolha de dois atributos pelo usuário de duas cartas.*/
+        /*Escolha do primeiro atributo das cartas pelo usuário.*/
 
                     printf("---------2. MENU SUPER TRUNFO----------\n");
                     printf("\n");
-                    printf("----Primeira Carta----\n");
-                    printf("Escolha dois atributos da Primeira Carta entre as opções abaixo para batalhar! \n");
-                    printf("1. Área Total:\n");
-                    printf("2. PIB:\n");
-                    printf("3. Número de Pontos Turísticos;\n");
-                    printf("4. Densidade Demográfica:\n");
-                    printf("5. Super-Poder: \n");
+                    printf("Escolha o Primeiro atributo entre as opções abaixo para batalhar! \n");
+                    printf("1. População: \n");
+                    printf("2. Área Total:\n");
+                    printf("3. PIB:\n");
+                    printf("4. Número de Pontos Turísticos;\n");
+                    printf("5. Densidade Demográfica:\n");
+                    printf("6. Super-Poder: \n");
                     printf("Insira o Primeiro Atributo: \n");
-                    scanf("%d", &carta1atributo1);
-            
-            /* Switch de escolha com os cálculos dos atributos da primeira carta.*/
+                    scanf("%d", &opcao1);
 
-                        switch(carta1atributo1){
-                            case 1:
-                                printf("...Você escolheu o atributo Área Total. \n");
-                                resultado1 = area1 > area2 ? 1 : 0;
+        /*Escolha do segundo atributo das cartas pelo usuário.*/
+
+                    printf("\n");
+                    printf("Escolha o Segundo Atributo entre as opções abaixo para batalhar! \n");
+                    printf("1. População: \n");
+                    printf("2. Área Total:\n");
+                    printf("3. PIB:\n");
+                    printf("4. Número de Pontos Turísticos;\n");
+                    printf("5. Densidade Demográfica:\n");
+                    printf("6. Super-Poder: \n");
+                    printf("Insira o Segundo Atributo: \n");
+                    scanf("%d", &opcao2);
+
+        /* Condição para evitar escolha de um mesmo atributo.*/
+
+                    if(opcao1 == opcao2){
+                        printf("Operação inválida. Você deve escolher dois atributos diferentes.\n");
+                    } else { 
+
+        /* Atribuição de valores do primeiro atributo escolhido pelo usuário.*/
+
+                            switch(opcao1){
+                            case 1: 
+                                    valor1carta1 = populacao1; valor1carta2 = populacao2; 
                             break;
                             case 2: 
-                                printf("...Você escolheu o atributo PIB. \n");
-                                resultado1 = pib1 > pib2 ? 1 : 0;
+                                    valor1carta1 = area1; valor1carta2 = area2; 
                             break;
-                            case 3:
-                                printf("...Você escolheu o atributo Nº de Pontos Turísticos. \n");
-                                resultado1 = nturismo1 > nturismo2 ? 1 : 0;
+                            case 3: 
+                                    valor1carta1 = pib1; valor1carta2 = pib2; 
                             break;
-                            case 4:
-                                printf("...Você escolheu o atributo Densidade Demográfica. \n");
-                                resultado1 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
+                            case 4: 
+                                    valor1carta1 = nturismo1; valor1carta2 = nturismo2; 
                             break;
-                            case 5:
-                                printf("...Você escolheu o atributo Super-Poder. \n");
-                                resultado1 = superpoder_1 > superpoder_2 ? 1 : 0;
+                            case 5: 
+                                    valor1carta1 = densidade_populacional1; valor1carta2 = densidade_populacional2; 
                             break;
-                            default:
-                                Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
-                        }
+                            case 6:
+                                    valor1carta1 = superpoder_1; valor1carta2 = superpoder_2;
+                            }
 
-                    printf("\n");
-                    printf("Escolha o Segundo Atributo da Primeira Carta entre as opções abaixo para batalhar! \n");
-                    printf("1. Área Total:\n");
-                    printf("2. PIB:\n");
-                    printf("3. Número de Pontos Turísticos;\n");
-                    printf("4. Densidade Demográfica:\n");
-                    printf("5. Super-Poder: \n");
-                    printf("Insira o Segundo Atributo: \n");
-                    scanf("%d", &carta1atributo2);
-                
-                    /* Condição para evitar escolha de um mesmo atributo.*/
+        /* Atribuição de valores do segundo atributo escolhido pelo usuário.*/
 
-                            if(carta1atributo1 == carta1atributo2){
-                                printf("Você escolheu o mesmo atributo. Escolha um atributo diferente. \n");
-                            } else {switch(carta1atributo2){
-                                    case 1:
-                                        printf("Você escolheu o atributo Área Total. \n");
-                                        resultado2 = area1 > area2 ? 1 : 0;
-                                    break;
-                                    case 2: 
-                                        printf("Você escolheu o atributo PIB. \n");
-                                        resultado2 = pib1 > pib2 ? 1 : 0;
-                                    break;
-                                    case 3:
-                                        printf("Você escolheu o atributo Nº de Pontos Turísticos. \n");
-                                        resultado2 = nturismo1 > nturismo2 ? 1 : 0;
-                                    break;
-                                    case 4:
-                                        printf("Você escolheu o atributo Densidade Demográfica. \n");
-                                        resultado2 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
-                                    break;
-                                    case 5:
-                                        printf("Você escolheu o atributo Super-Poder. \n");
-                                        resultado2 = superpoder_1 > superpoder_2 ? 1 : 0;
-                                    break;
-                                    default:
-                                        Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
-                                    }
-                                }
-
-            /*Escolha dos atributos para a Segunda Carta.*/
-
-                    printf("\n");
-                    printf("----Segunda Carta----\n");
-                    printf("Escolha dois atributos da Segunda Carta entre as opções abaixo para batalhar! \n");
-                    printf("1. Área Total:\n");
-                    printf("2. PIB:\n");
-                    printf("3. Número de Pontos Turísticos;\n");
-                    printf("4. Densidade Demográfica:\n");
-                    printf("5. Super-Poder: \n");
-                    printf("Insira o Primeiro Atributo: \n");
-                    scanf("%d", &carta2atributo1);
-            
-            /* Switch de escolha com os cálculos dos atributos da primeira carta.*/
-
-                        switch(carta2atributo1){
-                            case 1:
-                                printf("...Você escolheu o atributo Área Total. \n");
-                                resultado1 = area1 > area2 ? 1 : 0;
+                            switch(opcao2){
+                            case 1: 
+                                    valor1carta2 = populacao1; valor2carta2 = populacao2; 
                             break;
                             case 2: 
-                                printf("...Você escolheu o atributo PIB. \n");
-                                resultado1 = pib1 > pib2 ? 1 : 0;
+                                    valor1carta2 = area1; valor2carta2 = area2; 
                             break;
-                            case 3:
-                                printf("...Você escolheu o atributo Nº de Pontos Turísticos. \n");
-                                resultado1 = nturismo1 > nturismo2 ? 1 : 0;
+                            case 3: 
+                                    valor1carta2 = pib1; valor2carta2 = pib2; 
                             break;
-                            case 4:
-                                printf("...Você escolheu o atributo Densidade Demográfica. \n");
-                                resultado1 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
+                            case 4: 
+                                    valor1carta2 = nturismo1; valor2carta2 = nturismo2; 
                             break;
-                            case 5:
-                                printf("...Você escolheu o atributo Super-Poder. \n");
-                                resultado1 = superpoder_1 > superpoder_2 ? 1 : 0;
+                            case 5: 
+                                    valor1carta2 = densidade_populacional1; valor2carta2 = densidade_populacional2; 
                             break;
-                            default:
-                                Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
-                        }
-
-                    printf("\n");
-                    printf("Escolha o Segundo Atributo da Segunda Carta entre as opções abaixo para batalhar! \n");
-                    printf("1. Área Total:\n");
-                    printf("2. PIB:\n");
-                    printf("3. Número de Pontos Turísticos;\n");
-                    printf("4. Densidade Demográfica:\n");
-                    printf("5. Super-Poder: \n");
-                    printf("Insira o Segundo Atributo: \n");
-                    scanf("%d", &carta2atributo2);
-                
-                    /* Condição para evitar escolha de um mesmo atributo.*/
-
-                            if(carta2atributo1 == carta2atributo2){
-                                printf("Você escolheu o mesmo atributo. Escolha um atributo diferente. \n");
-                            } else {switch(carta2atributo2){
-                                    case 1:
-                                        printf("Você escolheu o atributo Área Total. \n");
-                                        resultado2 = area1 > area2 ? 1 : 0;
-                                    break;
-                                    case 2: 
-                                        printf("Você escolheu o atributo PIB. \n");
-                                        resultado2 = pib1 > pib2 ? 1 : 0;
-                                    break;
-                                    case 3:
-                                        printf("Você escolheu o atributo Nº de Pontos Turísticos. \n");
-                                        resultado2 = nturismo1 > nturismo2 ? 1 : 0;
-                                    break;
-                                    case 4:
-                                        printf("Você escolheu o atributo Densidade Demográfica. \n");
-                                        resultado2 = densidade_populacional1 < densidade_populacional2 ? 1 : 0;
-                                    break;
-                                    case 5:
-                                        printf("Você escolheu o atributo Super-Poder. \n");
-                                        resultado2 = superpoder_1 > superpoder_2 ? 1 : 0;
-                                    break;
-                                    default:
-                                        Printf("Operação Inválida. Escolha uma opção de 1 a 5. \n");
-                                    }
+                            case 6:
+                                    valor1carta2 = superpoder_1; valor2carta2 = superpoder_2;
                                 }
+                            }
 
-            /* Soma dos dois atributos computados pelo usuário através do terminal.*/
+        /* Comparação dos atributos escolhidos acima.*/ 
+        
+        printf("\n------------ Comparação de Atributos ------------\n");
+    printf("Atributo 1: %s\n", (opcao1 == 1) ? "População" :
+                                  (opcao1 == 2) ? "Área" :
+                                  (opcao1 == 3) ? "PIB" :
+                                  (opcao1 == 4) ? "Pontos Turísticos" : "Densidade Demográfica");
+    printf("Carta 1: %.2f, Carta 2: %.2f\n", valor1Carta1, valor1Carta2);
+    printf("Resultado: %s venceu!\n", 
+           (opcao1 == 5) ? ((valor1Carta1 < valor1Carta2) ? "Carta 1" : (valor1Carta1 > valor1Carta2) ? "Carta 2" : "Empate") :
+                           ((valor1Carta1 > valor1Carta2) ? "Carta 1" : (valor1Carta1 < valor1Carta2) ? "Carta 2" : "Empate"));
 
-                    int soma1 = carta1atributo1 + carta1atributo2;
-                    int soma2 = carta2atributo1 + carta2atributo2;
-
-            /* Bloco de comando referente à comparação dos resultados da batalha.*/
-            
-         
-
-
-            /*Continuação do Switch do Menu Principal.*/
-
+                           /*Continuação do Menu Principal.*/
+                    
             break;
             case 3:
                 printf("---------Obrigado por participar!----------\n");
@@ -480,10 +401,24 @@
             default:
                 printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
             break;
+                           
         }
 
-            /* Fim do programa.*/
+            
 
-return 0;
+            /* Soma dos dois atributos computados pelo usuário através do terminal.*/
 
+
+            /* Bloco de comando referente à comparação dos resultados da batalha.*/
+            
+                        
+
+
+            /*Continuação do Switch do Menu Principal.*/
+
+return 0; 
 }
+/* Fim do programa.*/
+
+
+
