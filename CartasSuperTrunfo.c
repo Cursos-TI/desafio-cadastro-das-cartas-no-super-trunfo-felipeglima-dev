@@ -20,7 +20,7 @@
 
         printf("\n--------- SEJA BEM-VINDO AO JOGO SUPER TRUNFO ----------\n");
         printf("--------- MENU PRINCIPAL ----------\n");
-        printf("Escolha uma das opções abaixo:\n");
+        printf("\n Escolha uma das opções abaixo:\n");
         printf("1. Regras:\n");
         printf("2. Iniciar Jogo:\n");
         printf("3. Sair:\n");
@@ -46,7 +46,7 @@
                     break;
                     }
             case 2: 
-            printf("\n--------- INICIANDO O JOGO ----------\n");
+            printf("\n--------- Iniciando ----------\n");
 
         /* Variáveis referentes à Primeira Carta.*/
 
@@ -62,11 +62,11 @@
 
         /*Entrada de dados pelo usuário da Primeira Carta.*/
 
-                printf("\n--------- CADASTRANDO CARTAS ----------\n");
-                printf("\n--------- Cadastre a Primeia Carta ----------\n");
+                printf("\n--------- Computando Informações ----------\n");
+                printf("\nCadastre a Primeia Carta ----------\n");
                
 
-                printf("Insira o país correspondente:\n");
+                printf("\nInsira o país correspondente:\n");
                 scanf(" %[^\n]", pais1);
 
                 printf("Insira o código do Estado de A a C: Ex.(A):\n");
@@ -118,7 +118,7 @@
                 printf ("Inverso Densidade Populacional: %.3f\n", inverso_densidade_populacional1);
                 printf("Super Poder: %.3f pontos\n", superpoder_1);
                 printf(".....Computando..... \n");
-                printf("--------- Primeira Carta cadastrada com sucesso! ----------\n");
+                printf("Primeira Carta cadastrada com sucesso! ----------\n");
                 printf("\n-----------------------------------\n");
 
         /* Variáveis referentes à Segunda Carta.*/
@@ -136,9 +136,9 @@
 
         /* Entrada de dados pelo usuário da Segunda carta.*/
 
-                printf("\n--------- Cadastre a Segunda Carta ----------\n");
+                printf("\nCadastre a Segunda Carta ----------\n");
 
-                printf("Insira o país correspondente:\n");
+                printf("\nInsira o país correspondente:\n");
                 scanf(" %[^\n]", pais2);
 
                 printf("Insira o código do Estado entre D e F: Ex.(D):\n");
@@ -189,20 +189,20 @@
                 printf ("Inverso Densidade Populacional: %.3f\n", inverso_densidade_populacional2);
                 printf("Super Poder: %.3f pontos\n", superpoder_2);
                 printf(".....Computando..... \n");
-                printf("\n--------- Segunda Carta cadastrada com sucesso! ----------\n");
+                printf("Segunda Carta cadastrada com sucesso! ----------\n");
                 printf("\n----------------- Você já pode batalhar! ------------------\n");
 
         /* Menu secundário para 1ª batalha de cartas escolhidas pelo usuário:*/
     
                 printf("\n---------- Iniciando 1º Batalha -----------\n");
 
-                        int escolha;
+                    int escolha;
 
         /*Escolha de um atributo pelo usuário para batalhar.*/
 
-                printf("--------- 1. MENU SUPER TRUNFO ----------\n");
+                printf("\n--------- 1. MENU SUPER TRUNFO ----------\n");
                 printf("\n");
-                printf("Escolha um dos atributos abaixo para batalhar:\n");
+                printf("Por favor, escolha um dos atributos abaixo para batalhar:\n");
                 printf("1. População:\n");
                 printf("2. Área Total:\n");
                 printf("3. PIB:\n");
@@ -215,60 +215,60 @@
                         switch(escolha){
                             case 1:
                                 printf("1. Atributo Escolhido: População:\n");
-                                printf("Primeira Carta: País: %s --- Cidade: %s", pais1, cidade1);
-                                printf("Segunda Carta: País: %s --- Cidade: %s", pais2, cidade2);
+                                printf("Primeira Carta: País: %s --- Cidade: %s\n", pais1, cidade1);
+                                printf("Segunda Carta: País: %s --- Cidade: %s\n", pais2, cidade2);
                             if(populacao1 > populacao2){
-                                printf("--- Resultado: A Primeira Carta: País: - %s -- Cidade: - %s VENCEU! ---\n", pais1, cidade1);
+                                printf("--- Resultado: A Primeira Carta: País: - %s -- Cidade: - %s - VENCEU! ---\n", pais1, cidade1);
                             } else if (populacao1 < populacao2) {
-                                printf("--- Resultado: A Segunda Carta: País: - %s -- Cidade: - %s VENCEU! ---\n", pais2, cidade2);
+                                printf("--- Resultado: A Segunda Carta: País: - %s -- Cidade: - %s - VENCEU! ---\n", pais2, cidade2);
                             } else {
                                 printf("--- Resultado: EMPATOU!! ---\n");
                             }
                             break;
                             case 2:
                                 printf("1. Atributo Escolhido: Área Total:\n");
-                                printf("Primeira Carta: País: %s --- Cidade: %s", pais1, cidade1);
-                                printf("Segunda Carta: País: %s --- Cidade: %s", pais2, cidade2);
+                                printf("Primeira Carta: País: %s --- Cidade: %s\n", pais1, cidade1);
+                                printf("Segunda Carta: País: %s --- Cidade: %s\n", pais2, cidade2);
                             if(area1 > area2){
-                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais1, cidade1);
+                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais1, cidade1);
                             } else if (area1 < area2) {
-                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais2, cidade2);
+                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais2, cidade2);
                             } else {
                                 printf("--- Resultado: EMPATOU!! ---\n");
                             }
                             break;
                             case 3:
                                 printf("1. Atributo Escolhido: PIB:\n");
-                                printf("Primeira Carta: País: %s --- Cidade: %s", pais1, cidade1);
-                                printf("Segunda Carta: País: %s --- Cidade: %s", pais2, cidade2);
+                                printf("Primeira Carta: País: %s --- Cidade: %s\n", pais1, cidade1);
+                                printf("Segunda Carta: País: %s --- Cidade: %s\n", pais2, cidade2);
                             if(pib1 > pib1){
-                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais1, cidade1);
+                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais1, cidade1);
                             } else if (pib1 < pib2) {
-                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais2, cidade2);
+                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais2, cidade2);
                             } else {
                                 printf("--- Resultado: EMPATOU!! ---\n");
                             }
                             break;
                             case 4:
                                 printf("1. Atributo Escolhido: Nº de Pontos Turísticos:\n");
-                                printf("Primeira Carta: País %s --- Cidade %s", pais1, cidade1);
-                                printf("Segunda Carta: País %s --- Cidade %s", pais2, cidade2);
+                                printf("Primeira Carta: País %s --- Cidade %s\n", pais1, cidade1);
+                                printf("Segunda Carta: País %s --- Cidade %s\n", pais2, cidade2);
                             if(nturismo1 > nturismo2){
-                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais1, cidade1);
+                                printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais1, cidade1);
                             } else if (nturismo1 < nturismo2) {
-                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais2, cidade2);
+                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais2, cidade2);
                             } else {
                                 printf("--- Resultado: EMPATOU!! ---\n");
                             }
                             break;
                             case 5:
                                 printf("1. Atributo Escolhido: Densidade Demográfica:\n");
-                                printf("Primeira Carta: País %s --- Cidade %s", pais1, cidade1);
-                                printf("Segunda Carta: País %s --- Cidade %s", pais2, cidade2);
+                                printf("Primeira Carta: País %s --- Cidade %s\n", pais1, cidade1);
+                                printf("Segunda Carta: País %s --- Cidade %s\n", pais2, cidade2);
                             if(densidade_populacional1 < densidade_populacional2){
-                                 printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais1, cidade1);
+                                 printf("--- Resultado: Primeira Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais1, cidade1);
                             } else if (densidade_populacional1 > densidade_populacional2) {
-                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s VENCEU! ---\n", pais2, cidade2);
+                                printf("--- Resultado: Segunda Carta: País: %s -- Cidade: - %s - VENCEU! ---\n", pais2, cidade2);
                             } else {
                                 printf("--- Resultado: EMPATOU!! ---\n");
                             }
@@ -285,17 +285,16 @@
                            
         /*Variáveis necessárias para escolha do menu da 2ª batalha.*/
                         
-                        int opcao1, opcao2; 
-                        float valor1carta1, valor1carta2, valor2carta1, valor2carta2;
-                        int somacarta1, somacarta2;
-                        int resultado1, resultado2;
+                    int opcao1, opcao2;
+                    float somacarta1, somacarta2;
+                    float valor1carta1, valor1carta2, valor2carta1, valor2carta2;
 
         /*Segundo menu de batalha com escolha de dois atributos pelo usuário de duas cartas.*/
 
         /*Escolha do primeiro atributo das cartas pelo usuário.*/
 
                     printf("\n--------- 2. MENU SUPER TRUNFO ----------\n");
-                    printf("Escolha o Primeiro atributo entre as opções abaixo para batalhar! \n");
+                    printf("\nPor favor, escolha o Primeiro atributo entre as opções abaixo para batalhar! \n");
                     printf("1. População: \n");
                     printf("2. Área Total:\n");
                     printf("3. PIB:\n");
@@ -307,8 +306,7 @@
 
         /*Escolha do segundo atributo das cartas pelo usuário.*/
 
-                    printf("\n");
-                    printf("Escolha o Segundo Atributo entre as opções abaixo para batalhar! \n");
+                    printf("\nEscolha o Segundo Atributo entre as opções abaixo para batalhar! \n");
                     printf("1. População: \n");
                     printf("2. Área Total:\n");
                     printf("3. PIB:\n");
@@ -372,7 +370,7 @@
         /* Comparação dos atributos escolhidos.*/ 
         
                     printf("\n--------- COMPARAÇÃO DOS ATRIBUTOS ----------\n");
-                    printf("Primeiro Atributo Escolhido: %s\n", 
+                    printf("\nPrimeiro Atributo: %s\n", 
                         (opcao1 == 1) ? "População" : 
                         (opcao1 == 2) ? "Área" : 
                         (opcao1 == 3) ? "PIB" :
@@ -383,7 +381,7 @@
                         (opcao1 == 6) ? ((valor1carta1 < valor1carta2) ? "Primeira Carta" : (valor1carta1 > valor1carta2) ? "Segunda Carta" : "---EMPATE---") :
                         ((valor1carta1 > valor1carta2) ? "Primeira Carta" : (valor1carta1 < valor1carta2) ? "Segunda Carta" : "--- EMPATOU ---"));
 
-                    printf("Segundo Atributo Escolhido: %s\n", 
+                    printf("Segundo Atributo: %s\n", 
                         (opcao1 == 1) ? "População" : 
                         (opcao1 == 2) ? "Área" : 
                         (opcao1 == 3) ? "PIB" :
@@ -395,9 +393,25 @@
                         ((valor2carta1 > valor2carta2) ? "Primeira Carta" : (valor2carta1 < valor2carta2) ? "Segunda Carta" : "--- EMPATOU ---"));
 
 
+        /*Soma dos atributos das cartas em batalha.*/
 
+                    somacarta1 = valor1carta1 + valor2carta1;
+                    somacarta2 = valor1carta2 + valor2carta2;
 
-                           /*Continuação do Menu Principal.*/
+                    printf("\n---- SOMA DOS ATRIBUTOS ----:\n");
+                    printf("\nPrimeira Carta: %.2f, Segunda Carta: %.2f\n", somacarta1, somacarta2);
+
+        /*Resultado da segunda batalha.*/
+
+                    if (somacarta1 > somacarta2) {
+                        printf("Resultado Final: Parabéns! A Primeira Carta venceu!\n");
+                    } else if (somacarta1 < somacarta2) {
+                        printf("Resultado Final: Parabéns! A Segunda Carta venceu!\n");
+                    } else {
+                    printf("Resultado Final: As duas cartas empataram!\n");
+    }
+
+        /*Continuação do Menu Principal.*/
                     
             break;
             case 3:
@@ -409,18 +423,6 @@
             break;
                            
         }
-
-            
-
-            /* Soma dos dois atributos computados pelo usuário através do terminal.*/
-
-
-            /* Bloco de comando referente à comparação dos resultados da batalha.*/
-            
-                        
-
-
-            /*Continuação do Switch do Menu Principal.*/
 
 return 0; 
 }
