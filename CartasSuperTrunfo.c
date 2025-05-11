@@ -1,4 +1,4 @@
-/*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL AVENTURERO.*/
+/*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL MESTRE.*/
 
 #include<stdio.h>
 #include<locale.h>
@@ -369,44 +369,31 @@
 
         /* Comparação dos atributos escolhidos.*/ 
         
-                    printf("\n--------- COMPARAÇÃO DOS ATRIBUTOS ----------\n");
+                    printf("\n--------- Comparando os Atributos Escolhidos ----------\n");
                     printf("\nPrimeiro Atributo: %s\n", 
-                        (opcao1 == 1) ? "População" : 
-                        (opcao1 == 2) ? "Área" : 
-                        (opcao1 == 3) ? "PIB" :
-                        (opcao1 == 4) ? "Pontos Turísticos" : 
+                        (opcao1 == 1) ? "População" : (opcao1 == 2) ? "Área" : (opcao1 == 3) ? "PIB" : (opcao1 == 4) ? "Pontos Turísticos" : 
                         (opcao1 == 5) ? "Densidade Demográfica" : "Super-Poder");
-                    printf("Primeira Carta: %.2f, Segunda Carta: %.2f\n", valor1carta1, valor1carta2);
-                    printf("Resultado: %s --- VENCEU ---\n", 
-                        (opcao1 == 6) ? ((valor1carta1 < valor1carta2) ? "Primeira Carta" : (valor1carta1 > valor1carta2) ? "Segunda Carta" : "---EMPATE---") :
-                        ((valor1carta1 > valor1carta2) ? "Primeira Carta" : (valor1carta1 < valor1carta2) ? "Segunda Carta" : "--- EMPATOU ---"));
+                    printf("Valor 1 da Primeira Carta: %.2f, Valor 1 da Segunda Carta: %.2f\n", valor1carta1, valor1carta2);
 
                     printf("Segundo Atributo: %s\n", 
-                        (opcao1 == 1) ? "População" : 
-                        (opcao1 == 2) ? "Área" : 
-                        (opcao1 == 3) ? "PIB" :
-                        (opcao1 == 4) ? "Pontos Turísticos" : 
+                        (opcao1 == 1) ? "População" : (opcao1 == 2) ? "Área" : (opcao1 == 3) ? "PIB" : (opcao1 == 4) ? "Pontos Turísticos" : 
                         (opcao1 == 5) ? "Densidade Demográfica" : "Super-Poder");
-                    printf("Primeira Carta: %.2f, Segunda Carta: %.2f\n", valor2carta1, valor2carta2);
-                    printf("Resultado: %s --- VENCEU ---\n", 
-                        (opcao1 == 6) ? ((valor2carta1 < valor2carta2) ? "Primeira Carta" : (valor2carta1 > valor2carta2) ? "Segunda Carta" : "---EMPATE---") :
-                        ((valor2carta1 > valor2carta2) ? "Primeira Carta" : (valor2carta1 < valor2carta2) ? "Segunda Carta" : "--- EMPATOU ---"));
-
+                    printf("Valor 2 da Primeira Carta: %.2f, Valor 2 da Segunda Carta: %.2f\n", valor2carta1, valor2carta2);
 
         /*Soma dos atributos das cartas em batalha.*/
 
                     somacarta1 = valor1carta1 + valor2carta1;
                     somacarta2 = valor1carta2 + valor2carta2;
 
-                    printf("\n---- SOMA DOS ATRIBUTOS ----:\n");
-                    printf("\nPrimeira Carta: %.2f, Segunda Carta: %.2f\n", somacarta1, somacarta2);
+                    printf("\n---- Somando os atributos correspondentes ----:\n");
+                    printf("\n Soma da Primeira Carta: %.2f, Soma da Segunda Carta: %.2f\n", somacarta1, somacarta2);
 
         /*Resultado da segunda batalha.*/
 
                     if (somacarta1 > somacarta2) {
-                        printf("Resultado Final: Parabéns! A Primeira Carta venceu!\n");
+                        printf("Resultado Final: --- PARABÉNS! A Primeira Carta venceu!\n");
                     } else if (somacarta1 < somacarta2) {
-                        printf("Resultado Final: Parabéns! A Segunda Carta venceu!\n");
+                        printf("Resultado Final: --- PARABÉNS! A Segunda Carta venceu!\n");
                     } else {
                     printf("Resultado Final: As duas cartas empataram!\n");
     }
@@ -415,8 +402,8 @@
                     
             break;
             case 3:
-                printf("---------Obrigado por participar!----------\n");
-                printf("---------Finalizando----------\n");
+                printf("--------- Obrigado por participar! ----------\n");
+                printf("--------- Finalizando jogo ----------\n");
             break;
             default:
                 printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
