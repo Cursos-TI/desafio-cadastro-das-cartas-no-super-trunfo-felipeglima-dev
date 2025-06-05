@@ -1,13 +1,15 @@
 /*DESAFIO SUPER TRUNFO - TEMA 2 - NÍVEL MESTRE.*/
 
-#include<stdio.h>
-#include<locale.h>
+#include <stdio.h> 
+#include <locale.h>
+#include <stdlib.h> 
+#include <string.h>
    
     int main(){
 
         /*Localizando formato de código para eventuais problemas de acentuação.
         */
-        setlocale(LC_ALL, "Portuguese_Brazil");
+        setlocale(LC_ALL, "Portuguese_Brazil.1252");
 
         /*Menu Interativo por Switch para navegar pelo jogo Super Trunfo*/
 
@@ -25,30 +27,34 @@
         printf("2. Iniciar Jogo:\n");
         printf("3. Sair:\n");
         scanf("%d",&opcao);
+        getchar();
     
         /*Bloco de código do menu principal. Modo switch.*/
 
         switch(opcao){ /* Início do Switch principal do jogo.*/
-            printf("\n---------REGRAS----------\n");
-            printf("---------Por favor, escolha entre a opção 1 e 2----------\n");
-            scanf("%d", &regras1);
-                    switch (regras1){
-                    case 1: 
-                            printf("---------1º REGRA----------\n");
-                            printf("Você deve inserir as informações correspondentes às duas cartas Super Trunfo quando for solicitado pelo Terminal.\n");
-                    break;
-                    case 2:
-                            printf("---------2º REGRA----------\n");
-                            printf("Você deverá escolher atributos para batalhar quando for solicitado pelo terminal.\n");
-                    break;
-                    default: 
-                            printf("Operação Inválida! Por favor, escolha opções entre 1 e 2.\n");
-                    break;
-                    }
+            case 1:
+                            do{ printf("\n---------REGRAS----------\n");
+                                printf("---------Por favor, escolha entre a opção 1 e 2----------\n");
+                                scanf("%d", &regras1);
+                                getchar();
+                            switch (regras1){
+                            case 1: 
+                                printf("---------1º REGRA----------\n");
+                                printf("Você deve inserir as informações correspondentes às duas cartas Super Trunfo quando for solicitado pelo Terminal.\n");
+                                break;
+                            case 2:
+                                printf("---------2º REGRA----------\n");
+                                printf("Você deverá escolher atributos para batalhar quando for solicitado pelo terminal.\n");
+                            break;
+                            default: 
+                                printf("Operação Inválida! Por favor, escolha opções entre 1 e 2.\n");
+                            break; } 
+                            } while (regras1 != 2);
+                    
             case 2: 
-            printf("\n--------- Iniciando ----------\n");
+                do{ printf("\n--------- Iniciando jogo ----------\n");
 
-        /* Variáveis referentes à Primeira Carta.*/
+        /*Variáveis referentes à Primeira Carta.*/
 
                     char codigo_estado1[90];
                     char pais1[90];
@@ -62,24 +68,27 @@
 
         /*Entrada de dados pelo usuário da Primeira Carta.*/
 
-                printf("\n--------- Computando Informações ----------\n");
                 printf("\nCadastre a Primeia Carta ----------\n");
-               
-
                 printf("\nInsira o país correspondente:\n");
-                scanf(" %[^\n]", pais1);
+
+                fgets(pais1, 90, stdin); 
+                pais1[strcspn(pais1, "\n")] = 0;
 
                 printf("Insira o código do Estado de A a C: Ex.(A):\n");
-                scanf(" %[^\n]", codigo_estado1);
-        
+                fgets(codigo_estado1, 90, stdin); 
+                codigo_estado1[strcspn(codigo_estado1, "\n")] = 0;
+
                 printf("Insira o Nome do Estado:\n");
-                scanf(" %[^\n]", estado1);
+                fgets(estado1, 90, stdin); 
+                estado1[strcspn(estado1, "\n")] = 0;
 
                 printf("Insira o Código da Carta de A a C entre 0 e 4: Ex.(A01):\n"); 
-                scanf(" %[^\n]", codigo_cidade1);
+                fgets(codigo_cidade1, 90, stdin); 
+                codigo_cidade1[strcspn(codigo_cidade1, "\n")] = 0;
 
                 printf("Insira o nome da cidade:\n"); 
-                scanf(" %[^\n]", cidade1);
+                fgets(cidade1, 100, stdin); 
+                cidade1[strcspn(cidade1, "\n")] = 0;
        
                 printf("Insira o Nº Populacional:\n"); 
                 scanf("%f", &populacao1);
@@ -139,19 +148,24 @@
                 printf("\nCadastre a Segunda Carta ----------\n");
 
                 printf("\nInsira o país correspondente:\n");
-                scanf(" %[^\n]", pais2);
+                fgets(pais2, 90, stdin); 
+                pais2[strcspn(pais2, "\n")] = 0;
 
                 printf("Insira o código do Estado entre D e F: Ex.(D):\n");
-                scanf(" %[^\n]", codigo_estado2);
+                fgets(codigo_estado2, 90, stdin); 
+                codigo_estado2[strcspn(codigo_estado2, "\n")] = 0;
 
                 printf("Insira o Nome do Estado:\n");
-                scanf(" %[^\n]", estado2);
+                fgets(estado2, 90, stdin); 
+                estado2[strcspn(estado2, "\n")] = 0;
 
                 printf("Insira o Código da Carta de D e F entre 5 a 7: Ex.(D02):\n"); 
-                scanf(" %[^\n]", codigo_cidade2);
+                fgets(codigo_cidade2, 90, stdin); 
+                codigo_cidade2[strcspn(codigo_cidade2, "\n")] = 0;
 
                 printf("Insira o nome da cidade:\n"); 
-                scanf(" %[^\n]", cidade2);
+                fgets(cidade2, 90, stdin); 
+                cidade2[strcspn(cidade2, "\n")] = 0;
 
                 printf("Insira o Nº Populacional:\n"); 
                 scanf("%f", &populacao2);
@@ -371,13 +385,21 @@
         
                     printf("\n--------- Comparando os Atributos Escolhidos ----------\n");
                     printf("\nPrimeiro Atributo: %s\n", 
-                        (opcao1 == 1) ? "População" : (opcao1 == 2) ? "Área" : (opcao1 == 3) ? "PIB" : (opcao1 == 4) ? "Pontos Turísticos" : 
-                        (opcao1 == 5) ? "Densidade Demográfica" : "Super-Poder");
+                        (opcao1 == 1) ? "População" :
+                        (opcao1 == 2) ? "Área" : 
+                        (opcao1 == 3) ? "PIB" : 
+                        (opcao1 == 4) ? "Pontos Turísticos" : 
+                        (opcao1 == 5) ? "Densidade Demográfica" : 
+                        "Super-Poder");
                     printf("Valor 1 da Primeira Carta: %.2f, Valor 1 da Segunda Carta: %.2f\n", valor1carta1, valor1carta2);
 
                     printf("Segundo Atributo: %s\n", 
-                        (opcao1 == 1) ? "População" : (opcao1 == 2) ? "Área" : (opcao1 == 3) ? "PIB" : (opcao1 == 4) ? "Pontos Turísticos" : 
-                        (opcao1 == 5) ? "Densidade Demográfica" : "Super-Poder");
+                        (opcao1 == 1) ? "População" : 
+                        (opcao1 == 2) ? "Área" : 
+                        (opcao1 == 3) ? "PIB" : 
+                        (opcao1 == 4) ? "Pontos Turísticos" : 
+                        (opcao1 == 5) ? "Densidade Demográfica" : 
+                        "Super-Poder");
                     printf("Valor 2 da Primeira Carta: %.2f, Valor 2 da Segunda Carta: %.2f\n", valor2carta1, valor2carta2);
 
         /*Soma dos atributos das cartas em batalha.*/
@@ -408,12 +430,10 @@
             default:
                 printf("Operação Inválida! Por favor, escolha opções entre 1 e 3.\n");
             break;
-                           
-        }
 
+    } while (opcao != 3);
+
+}
 return 0; 
 }
 /* Fim do programa.*/
-
-
-
